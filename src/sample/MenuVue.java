@@ -130,7 +130,7 @@ public class MenuVue implements Observer{
                 menuAnimation.getChildren().clear();
                 initGridSize();
             }
-            addImageGridpane(menuAnimation, "PNG" +File.separator+"Character"+animationMenu.get(0)+".png", animationMenu.get(2), animationMenu.get(1), 3);
+            addImageGridpane(menuAnimation, "PNG/Character"+animationMenu.get(0)+".png", animationMenu.get(2), animationMenu.get(1), 3);
 
             if (menuAnimation.getChildren().size() > 2){
                 menuAnimation.getChildren().get(menuAnimation.getChildren().size()-2).setVisible(false);
@@ -164,17 +164,17 @@ public class MenuVue implements Observer{
                 for (int j = 0; j< modele.getMapFile().get(i).length; j++){
                     char e = modele.getMapFile().get(i)[j];
                     switch(e){
-                        case GameChars.WALL:   addImageGridpane(mapPreview, "PNG" + File.separator+"Wall_Black.png", sizeBlock, j, i);
+                        case GameChars.WALL:   addImageGridpane(mapPreview, "PNG/Wall_Black.png", sizeBlock, j, i);
                             break;
-                        case GameChars.EMPTYARRIVED:   addImageGridpane(mapPreview, "PNG" + File.separator+"EndPoint_Blue.png", sizeBlock/3, j, i);
+                        case GameChars.EMPTYARRIVED:   addImageGridpane(mapPreview, "PNG/EndPoint_Blue.png", sizeBlock/3, j, i);
                             break;
-                        case GameChars.PLAYERCASE: case GameChars.PLAYERARRIVEDCASE:   addImageGridpane(mapPreview, "PNG" + File.separator+"Character4.png", sizeBlock, j, i);
+                        case GameChars.PLAYERCASE: case GameChars.PLAYERARRIVEDCASE:   addImageGridpane(mapPreview, "PNG/Character4.png", sizeBlock, j, i);
                             break;
-                        case GameChars.CAISSECASE:   addImageGridpane(mapPreview, "PNG" + File.separator+"Crate_Brown.png", (int) (0.9*sizeBlock), j, i);
+                        case GameChars.CAISSECASE:   addImageGridpane(mapPreview, "PNG/Crate_Brown.png", (int) (0.9*sizeBlock), j, i);
                             break;
-                        case GameChars.CAISSEARRIVED:   addImageGridpane(mapPreview, "PNG" + File.separator+"Crate_Beige.png", (int) (0.9*sizeBlock), j, i);
+                        case GameChars.CAISSEARRIVED:   addImageGridpane(mapPreview, "PNG/Crate_Beige.png", (int) (0.9*sizeBlock), j, i);
                             break;
-                        case GameChars.EMPTYCASE:   addImageGridpane(mapPreview, "PNG" + File.separator+"GroundGravel_Grass.png", sizeBlock, j, i);
+                        case GameChars.EMPTYCASE:   addImageGridpane(mapPreview, "PNG/GroundGravel_Grass.png", sizeBlock, j, i);
                             break;
                     }
                 }
